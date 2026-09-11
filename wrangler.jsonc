@@ -1,0 +1,9 @@
+{
+  "name": "rdtaylorjr",
+  "account_id": "55268525bfa00680c188676b88a77553",
+  "compatibility_date": "2026-08-04",
+  "assets": {
+    "directory": "public",
+    "not_found_handling": "404-page",
+  },
+}

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rusty Taylor</title>
+<meta name="description" content="Computational and philological analysis of Hebrew Psalms. Curriculum vitae of Rusty Taylor.">
+<meta name="author" content="Rusty Taylor">
+<link rel="canonical" href="https://rdtaylorjr.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Frank+Ruhl+Libre:wght@400;500&display=swap">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Rusty Taylor">
+<meta property="og:description" content="Computational and philological analysis of Hebrew Psalms.">
+<meta property="og:url" content="https://rdtaylorjr.com/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rusty Taylor",
+  "url": "https://rdtaylorjr.com/",
+  "email": "rdtaylorjr@gatech.edu",
+  "sameAs": ["https://orcid.org/0009-0007-0702-2375", "https://github.com/rdtaylorjr"],
+  "affiliation": {"@type": "Organization", "name": "Georgia Institute of Technology"},
+  "knowsAbout": ["Hebrew Psalms", "Biblical Hebrew", "Dead Sea Scrolls", "Computational linguistics"]
+}
+</script>
+<style>
+:root {
+  --bg:#fff; --ink:#111; --ink-2:#444; --label:#777; --rule:#e6e6e6; --ghost:#f0f0f0; --accent:#5580b3;
+  --sans:"IBM Plex Sans",-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif; --heb:"Frank Ruhl Libre","SBL Hebrew","Times New Roman",serif;
+  --nav-h:4rem; --display:clamp(3.5rem,11vw,9.5rem); color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-snap-type:y mandatory}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:1.0625rem;line-height:1.55;font-feature-settings:"kern","liga","tnum";text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.b{font-weight:700}.r{font-weight:400}
+cite{font-style:italic}
+[lang="he"]{font-family:var(--heb);font-weight:400}
+.wrap{width:min(72rem,100% - 4rem);margin:0 auto}
+
+/* chrome */
+.top{position:fixed;inset:0 0 auto 0;z-index:5;height:var(--nav-h);pointer-events:none}
+.top::before{content:"";position:absolute;inset:0 0 -1.5rem 0;background:linear-gradient(to bottom,var(--bg) 0%,var(--bg) 45%,rgba(255,255,255,0) 100%);z-index:-1}
+.top a{pointer-events:auto}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:100%}
+.top .name{font-weight:700;letter-spacing:-.01em;opacity:0;transition:opacity .3s}
+body.away .top .name{opacity:1}
+.top .right{display:flex;align-items:center;gap:1.5rem;font-weight:400;font-size:.9375rem}
+
+/* screens */
+.s{min-height:100svh;scroll-snap-align:start;scroll-snap-stop:always;position:relative;display:grid;align-content:center;padding:calc(var(--nav-h) + .5rem) 0 2rem;overflow:hidden}
+.s .num{position:absolute;right:max(1rem,calc((100% - 72rem) / 2 - 1rem));top:50%;transform:translateY(-50%);pointer-events:none;z-index:0}
+.s .num span{display:block;font-size:clamp(12rem,30vw,28rem);font-weight:700;letter-spacing:-.07em;line-height:.8;color:var(--ghost)}
+.s .wrap{position:relative;z-index:1}
+.s h2{margin:0 0 2.25rem;font-size:clamp(2rem,4vw,3.25rem);font-weight:700;letter-spacing:-.03em;line-height:1;display:flex;align-items:baseline;gap:1rem}
+.s h2 small{font-size:.8125rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--label)}
+.s .in{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.s.on .in{opacity:1;transform:none}
+.s.on .in:nth-child(2){transition-delay:.08s}.s.on .in:nth-child(3){transition-delay:.16s}.s.on .in:nth-child(4){transition-delay:.24s}
+
+/* hero */
+.hero .wrap{display:grid;gap:1.5rem;position:relative}
+.hero h1{position:relative;width:max-content;max-width:100%;margin:0;font-size:var(--display);font-weight:700;letter-spacing:-.05em;line-height:.88}
+.hero .heb{position:absolute;right:-.9em;top:calc(var(--display) * .73);font-family:var(--heb);font-size:clamp(14rem,calc(10.8rem + 15.3vw),24rem);font-weight:500;letter-spacing:0;line-height:.9;color:var(--ghost);pointer-events:none;z-index:-1;opacity:.7;white-space:nowrap}
+.hero p{margin:0;max-width:34ch;font-size:clamp(1.25rem,2.2vw,1.75rem);font-weight:400;line-height:1.3;letter-spacing:-.01em}
+.hero .links{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin:1rem 0 0;padding:0;list-style:none;font-size:1rem;font-weight:400}
+.hero .links a{border-bottom:1px solid var(--rule);padding-bottom:.1rem}
+.hero .links a:hover{border-color:var(--accent)}
+.hero .links .quiet{color:var(--label);font-weight:300}
+
+/* rows */
+.rows{margin:0;padding:0;list-style:none;border-top:1px solid var(--rule)}
+.rows li{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:2rem;padding:1.1rem 0;border-bottom:1px solid var(--rule)}
+.rows .h{font-size:1.125rem}
+.rows .when{color:var(--label);white-space:nowrap;padding-top:.15rem;font-size:1.0625rem}
+.rows .d{grid-column:1/-1;margin:.3rem 0 0;color:var(--ink-2);max-width:62ch;font-size:1.0625rem}
+.rows .d+.d{margin-top:.15rem}
+.statement{max-width:62ch;font-size:1.125rem;font-weight:300;line-height:1.55;margin:0}
+.statement .r{font-weight:400}
+.big{margin:0;padding:0;list-style:none;font-size:1.125rem;line-height:1.55}
+.big li{display:grid;grid-template-columns:10rem 1fr;gap:1rem;padding:1.1rem 0;border-top:1px solid var(--rule)}
+.big li:last-child{border-bottom:1px solid var(--rule)}
+#memberships .big li{grid-template-columns:1fr}
+.big .k{color:var(--label);font-size:.8125rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400;padding-top:.3rem}
+.bib{margin:0;padding:0;list-style:none;max-width:70ch;font-size:1.125rem}
+.bib h3{font-size:.8125rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--label);margin:1.75rem 0 .75rem}
+.bib h3:first-child{margin-top:0}
+.bib li{padding-left:1.5rem;text-indent:-1.5rem;margin:0 0 .85rem;color:var(--ink-2)}
+.bib li .r{color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.end{position:absolute;left:0;right:0;bottom:1.5rem;margin:0;color:var(--label);font-size:.875rem;text-align:right;width:min(72rem,100% - 4rem);margin:0 auto}
+
+@media (max-width:900px){
+  .s{padding:calc(var(--nav-h) + 1rem) 0 3rem}
+  .s.hero{padding:var(--nav-h) 0}
+  .hero h1{width:auto}
+  .hero .heb{right:0}
+  .s .num{right:.5rem;top:auto;bottom:1rem;transform:none}
+  .s .num span{font-size:clamp(6rem,24vw,9rem)}
+  .end{bottom:1rem;width:min(72rem,100% - 2.5rem)}
+  .two{grid-template-columns:1fr;gap:1.5rem}
+  .big li{grid-template-columns:1fr;gap:.25rem}
+  .rows li{column-gap:1rem}
+}
+@media (max-height:820px){
+  body{font-size:.9375rem;line-height:1.45}
+  .s h2{font-size:1.75rem;margin-bottom:1.25rem}
+  .rows li{padding:.75rem 0}
+  .rows .h{font-size:1rem}
+  .rows .d{font-size:.9375rem}
+  .rows .when{font-size:.9375rem}
+  .big{font-size:1rem}
+  .big li{padding:.75rem 0}
+  .bib{font-size:.9375rem}
+  .bib li{margin-bottom:.6rem}
+  .bib h3{margin:1.1rem 0 .5rem}
+  .statement{font-size:1rem}
+}
+@media (max-width:600px){
+  body{font-size:.9375rem;line-height:1.45}
+  .wrap{width:min(72rem,100% - 2.5rem)}
+  .s{padding:calc(var(--nav-h) + .25rem) 0 2.5rem}
+  .s h2{font-size:1.75rem;margin-bottom:1rem}
+  .rows li{padding:.7rem 0}
+  .rows .h{font-size:1rem}
+  .rows .d{margin-top:.15rem;font-size:.9375rem}
+  .rows .when{font-size:.875rem}
+  .big{font-size:1rem}
+  .big li{padding:.7rem 0}
+  .bib{font-size:.9375rem}
+  .bib li{margin-bottom:.6rem}
+  .bib h3{margin:1.1rem 0 .5rem}
+  .statement{font-size:1rem}
+}
+@media print{html{scroll-snap-type:none}.top,.num,.hero .heb{display:none}.s{min-height:0;padding:0 0 1.25rem;display:block}.s .in{opacity:1;transform:none}body{background:#fff;color:#000;font-size:10.5pt}.hero h1{font-size:26pt}.s h2{font-size:15pt}a{color:#000}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="name" href="#top">Rusty Taylor</a>
+    <div class="right">
+      <a href="cv.pdf">CV (PDF)</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="s hero" id="top">
+  <div class="wrap">
+    <h1 class="in">Rusty Taylor<span class="heb" aria-hidden="true">תהלים</span></h1>
+    <p class="in">Computational and philological analysis of Hebrew Psalms.</p>
+    <ul class="links in">
+      <li><a href="mailto:rdtaylorjr@gatech.edu">rdtaylorjr@gatech.edu</a></li>
+      <li><a href="https://tehillim.dev">tehillim.dev</a></li>
+      <li><a href="https://github.com/rdtaylorjr">github.com/rdtaylorjr</a></li>
+      <li><a href="https://orcid.org/0009-0007-0702-2375">ORCID 0009-0007-0702-2375</a></li>
+      <li class="quiet">Colorado Springs, Colorado, USA</li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="interests">
+  <div class="num" aria-hidden="true"><span>01</span></div>
+  <div class="wrap">
+    <h2 class="in">Research Interests</h2>
+    <p class="statement in"><span class="r">Computational and philological analysis of Hebrew Psalms.</span> I study how formal linguistic patterns and textual variation across manuscript witnesses bear on traditional accounts of Hebrew poetic form.</p>
+  </div>
+</section>
+
+<section class="s" id="education">
+  <div class="num" aria-hidden="true"><span>02</span></div>
+  <div class="wrap">
+    <h2 class="in">Education</h2>
+    <ul class="rows in">
+      <li><span class="h"><span class="b">M.S. Computer Science</span>&nbsp; <span class="r">Georgia Institute of Technology</span></span><span class="when">2025</span><p class="d">Specialization in Artificial Intelligence&nbsp; GPA 4.0</p></li>
+      <li><span class="h"><span class="b">B.S. Computer Science</span>&nbsp; <span class="r">Western Governors University</span></span><span class="when">2020</span><p class="d">Excellence Award in Artificial Intelligence</p></li>
+      <li><span class="h"><span class="b">M.A. Old Testament and Semitic Languages</span>&nbsp; <span class="r">Trinity Evangelical Divinity School</span></span><span class="when">2015</span><p class="d">Magna cum laude&nbsp; GPA 3.83</p><p class="d">Thesis: <span class="r">“Translated Repetitions in Septuagint Proverbs”</span> readers Eric J. Tully and Dennis R. Magary. <a href="https://www.proquest.com/docview/1712864481">ProQuest 1597036</a></p></li>
+      <li><span class="h"><span class="b">B.A. Biblical Studies</span>&nbsp; <span class="r">Florida College</span></span><span class="when">2005</span><p class="d">Cum laude&nbsp; GPA 3.5&nbsp; Minor in Mathematics</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="languages">
+  <div class="num" aria-hidden="true"><span>03</span></div>
+  <div class="wrap">
+    <h2 class="in">Languages</h2>
+    <ul class="big in">
+      <li><span class="k">Research</span><span><span class="r">Hebrew</span> Epigraphic, Biblical, Qumranic, Mishnaic, Modern&nbsp; <span class="r">Greek</span> Hellenistic&nbsp; <span class="r">Aramaic</span> Imperial, Palestinian, Syriac&nbsp; <span class="r">Canaanite</span> Phoenician, Ammonite, Moabite, Edomite&nbsp; <span class="r">Coptic</span> Sahidic&nbsp; <span class="r">Hittite</span></span></li>
+      <li><span class="k">Modern</span><span><span class="r">English</span> native&nbsp; <span class="r">French</span> reading&nbsp; <span class="r">German</span> basic reading</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="research">
+  <div class="num" aria-hidden="true"><span>04</span></div>
+  <div class="wrap">
+    <h2 class="in">Research Experience</h2>
+    <ul class="rows in">
+      <li><span class="h"><span class="r">Tehillim: Computational Analysis of the Psalms</span>&nbsp; <a href="https://tehillim.dev">tehillim.dev</a>&nbsp; <a href="https://github.com/rdtaylorjr/tehillim">github.com/rdtaylorjr/tehillim</a></span><span class="when">2026–present</span><p class="d">Evaluation of formal and distributional representations of Hebrew verse in ETCBC BHSA using Text-Fabric, with replaceable parallelism and genre baselines. Replication and extension of analyses in Trublet (1991) and van Peursen (2020). Adaptation of DSS2ETCBC to align 11Q5 to BHSA.</p></li>
+      <li><span class="h"><span class="r">Transcriber, Critical Edition of the Hebrew Psalter (CEHP)</span>&nbsp; Duke Divinity School</span><span class="when">2026–present</span><p class="d">Transcribing MK31 (docID 350007) for the eclectic critical edition of Psalms 1–50, directed by Brent A. Strawn and Drew Longacre.</p></li>
+      <li><span class="h"><span class="r">Graduate Research Assistant to Martin G. Abegg Jr. and Peter W. Flint</span>&nbsp; Trinity Western University</span><span class="when">2011–2013</span><p class="d">Transcription and morphological tagging of Mishnah manuscripts. Syntactic tagging of Dead Sea Scrolls texts. Transcription and indexing of Naḥal Ḥever Greek papyri for <cite>The Dead Sea Scrolls Concordance</cite>, vol. 2 (Brill, 2016). Research and drafting for edited volumes with P. Flint.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="papers">
+  <div class="num" aria-hidden="true"><span>05</span></div>
+  <div class="wrap">
+    <h2 class="in">Publications</h2>
+    <div class="bib in">
+      <h3>Conference Papers</h3>
+      <ul class="bib">
+        <li>Taylor, Russell, Benjamin Herbert, and Michael Sana. <span class="r">“Pun Intended: Multi-agent Translation of Wordplay with Contrastive Learning and Phonetic-Semantic Embeddings.”</span> In <cite>Experimental IR Meets Multilinguality, Multimodality, and Interaction</cite>. Edited by Matthias Hagen et al. LNCS 17087. Springer, 2026. doi:10.1007/978-3-032-39150-6_20. <a href="https://arxiv.org/abs/2608.04311">arXiv:2608.04311</a>.&nbsp; (forthcoming)</li>
+        <li>Taylor, Russell, Adam Brikman, and Prateek Awate. <span class="r">“Searching for Sound-Meaning Collisions: Graph-Based Affordance Retrieval and Multi-Evaluator Ranking for Pun Translation at CLEF 2026 JOKER Task 2.”</span> Pages 4295–4306 in <cite>Working Notes of the Conference and Labs of the Evaluation Forum</cite>. CEUR Workshop Proceedings, 2026. <a href="https://arxiv.org/abs/2608.04299">arXiv:2608.04299</a>.&nbsp; First place, JOKER Task 2.&nbsp; (forthcoming)</li>
+        <li>Taylor, Russell, Benjamin Herbert, and Michael Sana. <span class="r">“Pun Intended: Multi-Agent Translation of Wordplay with Contrastive Learning and Phonetic-Semantic Embeddings for CLEF JOKER 2025 Task 2.”</span> Pages 2870–2888 in <cite>Working Notes of the Conference and Labs of the Evaluation Forum</cite>. CEUR Workshop Proceedings 4038, 2025. <a href="https://ceur-ws.org/Vol-4038/paper_229.pdf">CEUR-WS Vol-4038</a>, 2870–2888.&nbsp; Best of CLEF 2025 Labs.&nbsp; First place, JOKER Task 2.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="chapters">
+  <div class="num" aria-hidden="true"><span>06</span></div>
+  <div class="wrap">
+    <h2 class="in">Publications <small>continued</small></h2>
+    <div class="bib in">
+      <h3>Book Chapters</h3>
+      <ul class="bib">
+        <li>Taylor, Russell. <span class="r">“‘Your Eyes Will Be Opened’: Inner-Biblical Allusion and Creation Language in John 9.”</span> Pages 119–138 in <cite>The Works No One Else Did: The Miracles of Jesus</cite>. Edited by David McClister. Florida College Annual Lectures. Temple Terrace, FL: Florida College Press, 2019.</li>
+      </ul>
+      <h3>Book Reviews</h3>
+      <ul class="bib">
+        <li>Taylor, Russell. Review of <cite>Proverbs (The Story of God Bible Commentary)</cite>, by Ryan P. O'Dowd. <cite>Books at a Glance</cite>, 2018.</li>
+        <li>Taylor, Russell. Review of <cite>Rediscovering the Dead Sea Scrolls: An Assessment of Old and New Approaches and Methods</cite>, edited by Maxine L. Grossman. Pages 455–458 in <cite>Perspectives on Hebrew Scriptures X: Comprising the Contents of Journal of Hebrew Scriptures, vol. 13</cite>. Edited by Christophe Nihan and Ehud Ben Zvi. Gorgias, 2017. <a href="https://doi.org/10.31826/9781463237646-034">doi:10.31826/9781463237646-034</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="reviews">
+  <div class="num" aria-hidden="true"><span>07</span></div>
+  <div class="wrap">
+    <h2 class="in">Publications <small>continued</small></h2>
+    <div class="bib in">
+      <h3>Conference Presentations</h3>
+      <ul class="bib">
+        <li><span class="r">“Translation Technique and Lexical Choice in Greek Exodus.”</span> Society of Biblical Literature Annual Meeting, IOSCS session, Chicago, November 2012.</li>
+        <li><span class="r">“Syntactic Functions of the Particle <span lang="he" dir="rtl">כי</span> in Qumran Hebrew.”</span> Pacific Northwest Regional Meeting of the AAR/SBL and ASOR, March 2012.&nbsp; First Prize, Graduate Student Paper Competition.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="teaching">
+  <div class="num" aria-hidden="true"><span>08</span></div>
+  <div class="wrap">
+    <h2 class="in">Teaching</h2>
+    <ul class="rows in">
+      <li><span class="h"><span class="r">Instructional Associate, CS 6601 Artificial Intelligence</span>&nbsp; Georgia Institute of Technology</span><span class="when">2026–present</span><p class="d">Wrote deep learning lecture series delivered by the professor of record. Assignment lead for a 1500-student graduate course, with responsibility for academic integrity review, student forums, office hours, and assessment.</p></li>
+      <li><span class="h"><span class="r">Guest Lecturer, RELS 245 Elementary Biblical Hebrew</span>&nbsp; Trinity Western University</span><span class="when">2012–2013</span><p class="d">Lectured on Biblical Hebrew grammar for a course taught by Martin G. Abegg Jr.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="experience">
+  <div class="num" aria-hidden="true"><span>09</span></div>
+  <div class="wrap">
+    <h2 class="in">Professional Experience</h2>
+    <ul class="rows in">
+      <li><span class="h"><span class="r">Senior Machine Learning Engineer</span>&nbsp; Spectrum</span><span class="when">2024–present</span><p class="d">Technical lead for real-time machine learning systems, responsible for model serving and the pipelines feeding them.</p></li>
+      <li><span class="h"><span class="r">Senior Software Engineer</span>&nbsp; Nielsen</span><span class="when">2021–2024</span><p class="d">Trained and evaluated classifiers over large-scale behavioral data; built the distributed pipelines supplying their training data.</p></li>
+      <li><span class="h"><span class="r">Software Engineer</span>&nbsp; Accordance Bible Software</span><span class="when">2019–2021</span><p class="d">Built and maintained specialized right-to-left Hebrew and Aramaic datasets optimized for linguistic analysis. Parsed and normalized unstructured ancient-language text for downstream processing.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="skills">
+  <div class="num" aria-hidden="true"><span>10</span></div>
+  <div class="wrap">
+    <h2 class="in">Skills</h2>
+    <ul class="big in">
+      <li><span class="k">Digital Philology</span><span>BHSA, Andersen-Forbes, Holmstedt-Abegg, Westminster morphology, Text-Fabric, Emdros/MQL</span></li>
+      <li><span class="k">Data Analysis</span><span>NumPy, SciPy, statsmodels, pandas, matplotlib, Jupyter</span></li>
+      <li><span class="k">Machine Learning</span><span>PyTorch, Hugging Face Transformers, sentence-transformers, scikit-learn, gensim</span></li>
+      <li><span class="k">Engineering</span><span>Python, Scala, Java, SQL, Spark, AWS, Docker, Linux</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="memberships">
+  <div class="num" aria-hidden="true"><span>11</span></div>
+  <div class="wrap">
+    <h2 class="in">Memberships</h2>
+    <ul class="big in">
+      <li><span class="k"></span><span>Society of Biblical Literature</span></li>
+      <li><span class="k"></span><span>European Association of Biblical Studies</span></li>
+      <li><span class="k"></span><span>Association for Computational Linguistics</span></li>
+    </ul>
+  </div>
+  <p class="end">Last updated September 11, 2026</p>
+</section>
+
+</main>
+
+<script>
+(() => {
+  const screens = [...document.querySelectorAll('.s')];
+  let current = 0;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        current = screens.indexOf(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  screens.forEach(s => io.observe(s));
+  const reveal = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); }), { threshold: 0.15 });
+  screens.forEach(s => reveal.observe(s));
+  const show = () => { screens.forEach(s => { const r = s.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) s.classList.add('on'); }); const h1 = document.querySelector('.hero h1').getBoundingClientRect(); document.body.classList.toggle('away', h1.bottom < 0 || h1.top > innerHeight); };
+  show(); addEventListener('scroll', show, { passive: true }); addEventListener('resize', show);
+  const go = i => { const t = screens[Math.min(screens.length - 1, Math.max(0, i))]; if (t) t.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); };
+  addEventListener('keydown', e => {
+    if (/^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(e.target.tagName)) return;
+    if (['ArrowDown', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); go(current + 1); }
+    if (['ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); go(current - 1); }
+  });
+})();
+</script>
+
+</body>
+</html>
