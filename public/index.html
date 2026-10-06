@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rusty Taylor</title>
-<meta name="description" content="Computational and philological analysis of Hebrew Psalms. Curriculum vitae of Rusty Taylor.">
+<meta name="description" content="Computational textual criticism of the Hebrew Bible. Curriculum vitae of Rusty Taylor.">
 <meta name="author" content="Rusty Taylor">
 <link rel="canonical" href="https://rdtaylorjr.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Frank+Ruhl+Libre:wght@400;500&display=swap">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Rusty Taylor">
-<meta property="og:description" content="Computational and philological analysis of Hebrew Psalms.">
+<meta property="og:description" content="Computational textual criticism of the Hebrew Bible.">
 <meta property="og:url" content="https://rdtaylorjr.com/">
 <meta name="twitter:card" content="summary">
 <script type="application/ld+json">
@@ -68,11 +68,11 @@ body.away .top .name{opacity:1}
 .s.on .in:nth-child(2){transition-delay:.08s}.s.on .in:nth-child(3){transition-delay:.16s}.s.on .in:nth-child(4){transition-delay:.24s}
 
 /* hero */
-.hero .wrap{display:grid;gap:1.5rem;position:relative}
-.hero h1{position:relative;width:max-content;max-width:100%;margin:0;font-size:var(--display);font-weight:700;letter-spacing:-.05em;line-height:.88}
+.hero .wrap{display:grid;grid-template-columns:fit-content(100%) 1fr;gap:1.5rem 0;position:relative}
+.hero h1{grid-column:1;position:relative;width:max-content;max-width:100%;margin:0;font-size:var(--display);font-weight:700;letter-spacing:-.05em;line-height:.88}
 .hero .heb{position:absolute;right:-.9em;top:calc(var(--display) * .73);font-family:var(--heb);font-size:clamp(14rem,calc(10.8rem + 15.3vw),24rem);font-weight:500;letter-spacing:0;line-height:.9;color:var(--ghost);pointer-events:none;z-index:-1;opacity:.7;white-space:nowrap}
-.hero p{margin:0;max-width:34ch;font-size:clamp(1.25rem,2.2vw,1.75rem);font-weight:400;line-height:1.3;letter-spacing:-.01em}
-.hero .links{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin:1rem 0 0;padding:0;list-style:none;font-size:1rem;font-weight:400}
+.hero p{grid-column:1;width:0;min-width:100%;margin:0;font-size:clamp(1.25rem,2.2vw,1.75rem);font-weight:400;line-height:1.3;letter-spacing:-.01em}
+.hero .links{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin:1rem 0 0;padding:0;list-style:none;font-size:1rem;font-weight:400}
 .hero .links a{border-bottom:1px solid var(--rule);padding-bottom:.1rem}
 .hero .links a:hover{border-color:var(--accent)}
 .hero .links .quiet{color:var(--label);font-weight:300}
@@ -160,10 +160,9 @@ body.away .top .name{opacity:1}
 <section class="s hero" id="top">
   <div class="wrap">
     <h1 class="in">Rusty Taylor<span class="heb" aria-hidden="true">תהלים</span></h1>
-    <p class="in">Computational and philological analysis of Hebrew Psalms.</p>
+    <p class="in">Computational textual criticism of the Hebrew Bible.</p>
     <ul class="links in">
       <li><a href="mailto:rdtaylorjr@gatech.edu">rdtaylorjr@gatech.edu</a></li>
-      <li><a href="https://tehillim.dev">tehillim.dev</a></li>
       <li><a href="https://github.com/rdtaylorjr">github.com/rdtaylorjr</a></li>
       <li><a href="https://orcid.org/0009-0007-0702-2375">ORCID 0009-0007-0702-2375</a></li>
       <li class="quiet">Colorado Springs, Colorado, USA</li>
@@ -175,7 +174,7 @@ body.away .top .name{opacity:1}
   <div class="num" aria-hidden="true"><span>01</span></div>
   <div class="wrap">
     <h2 class="in">Research Interests</h2>
-    <p class="statement in"><span class="r">Computational and philological analysis of Hebrew Psalms.</span> I study how formal linguistic patterns and textual variation across manuscript witnesses bear on traditional accounts of Hebrew poetic form.</p>
+    <p class="statement in"><span class="r">Computational textual criticism of the Hebrew Bible,</span> exploring scribal practice, translation technique, and linguistic variation across ancient witnesses. Current work on the Psalms.</p>
   </div>
 </section>
 
@@ -197,8 +196,8 @@ body.away .top .name{opacity:1}
   <div class="wrap">
     <h2 class="in">Languages</h2>
     <ul class="big in">
-      <li><span class="k">Research</span><span><span class="r">Hebrew</span> Epigraphic, Biblical, Qumranic, Mishnaic, Modern&nbsp; <span class="r">Greek</span> Hellenistic&nbsp; <span class="r">Aramaic</span> Imperial, Palestinian, Syriac&nbsp; <span class="r">Canaanite</span> Phoenician, Ammonite, Moabite, Edomite&nbsp; <span class="r">Coptic</span> Sahidic&nbsp; <span class="r">Hittite</span></span></li>
-      <li><span class="k">Modern</span><span><span class="r">English</span> native&nbsp; <span class="r">French</span> reading&nbsp; <span class="r">German</span> basic reading</span></li>
+      <li><span class="k">Research</span><span><span class="r">Hebrew</span> Epigraphic, Biblical, Qumranic, Mishnaic&nbsp; <span class="r">Greek</span> Hellenistic&nbsp; <span class="r">Aramaic</span> Imperial, Palestinian, Syriac&nbsp; <span class="r">Canaanite</span> Phoenician, Ammonite, Moabite, Edomite&nbsp; <span class="r">Coptic</span> Sahidic&nbsp; <span class="r">Hittite</span></span></li>
+      <li><span class="k">Modern</span><span><span class="r">English</span> native&nbsp; <span class="r">Hebrew</span> reading&nbsp; <span class="r">French</span> reading&nbsp; <span class="r">German</span> basic reading</span></li>
     </ul>
   </div>
 </section>
@@ -222,8 +221,8 @@ body.away .top .name{opacity:1}
     <div class="bib in">
       <h3>Conference Papers</h3>
       <ul class="bib">
-        <li>Taylor, Russell, Benjamin Herbert, and Michael Sana. <span class="r">“Pun Intended: Multi-agent Translation of Wordplay with Contrastive Learning and Phonetic-Semantic Embeddings.”</span> In <cite>Experimental IR Meets Multilinguality, Multimodality, and Interaction</cite>. Edited by Matthias Hagen et al. LNCS 17087. Springer, 2026. doi:10.1007/978-3-032-39150-6_20. <a href="https://arxiv.org/abs/2608.04311">arXiv:2608.04311</a>.&nbsp; (forthcoming)</li>
-        <li>Taylor, Russell, Adam Brikman, and Prateek Awate. <span class="r">“Searching for Sound-Meaning Collisions: Graph-Based Affordance Retrieval and Multi-Evaluator Ranking for Pun Translation at CLEF 2026 JOKER Task 2.”</span> Pages 4295–4306 in <cite>Working Notes of the Conference and Labs of the Evaluation Forum</cite>. CEUR Workshop Proceedings, 2026. <a href="https://arxiv.org/abs/2608.04299">arXiv:2608.04299</a>.&nbsp; First place, JOKER Task 2.&nbsp; (forthcoming)</li>
+        <li>Taylor, Russell, Benjamin Herbert, and Michael Sana. <span class="r">“Pun Intended: Multi-agent Translation of Wordplay with Contrastive Learning and Phonetic-Semantic Embeddings.”</span> Pages 274–287 in <cite>Experimental IR Meets Multilinguality, Multimodality, and Interaction</cite>. Edited by Matthias Hagen et al. LNCS 17087. Springer, 2027. <a href="https://doi.org/10.1007/978-3-032-39150-6_20">doi:10.1007/978-3-032-39150-6_20</a>.</li>
+        <li>Taylor, Russell, Adam Brikman, and Prateek Awate. <span class="r">“Searching for Sound-Meaning Collisions: Graph-Based Affordance Retrieval and Multi-Evaluator Ranking for Pun Translation at CLEF 2026 JOKER Task 2.”</span> Pages 4295–4306 in <cite>Working Notes of the Conference and Labs of the Evaluation Forum</cite>. CEUR Workshop Proceedings, <a href="https://ceur-ws.org/Vol-4283/">CEUR-WS Vol-4283</a>, 4295–4306.&nbsp; First place, JOKER Task 2.</li>
         <li>Taylor, Russell, Benjamin Herbert, and Michael Sana. <span class="r">“Pun Intended: Multi-Agent Translation of Wordplay with Contrastive Learning and Phonetic-Semantic Embeddings for CLEF JOKER 2025 Task 2.”</span> Pages 2870–2888 in <cite>Working Notes of the Conference and Labs of the Evaluation Forum</cite>. CEUR Workshop Proceedings 4038, 2025. <a href="https://ceur-ws.org/Vol-4038/paper_229.pdf">CEUR-WS Vol-4038</a>, 2870–2888.&nbsp; Best of CLEF 2025 Labs.&nbsp; First place, JOKER Task 2.</li>
       </ul>
     </div>
@@ -308,7 +307,7 @@ body.away .top .name{opacity:1}
       <li><span class="k"></span><span>Association for Computational Linguistics</span></li>
     </ul>
   </div>
-  <p class="end">Last updated September 11, 2026</p>
+  <p class="end">Last updated October 6, 2026</p>
 </section>
 
 </main>
