@@ -1,1 +1,6 @@
 .DS_Store
+.wrangler/
+
+# Previous CV versions stay local; only the current one is tracked
+docs/CV Rusty Taylor *
+!docs/CV Rusty Taylor 261021.*

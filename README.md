@@ -4,12 +4,14 @@ Static one-page CV site. Everything served is in `public/`. No build step.
 
 ## Update
 
-Export the CV from Pages to `public/cv.pdf`, edit `public/index.html` to match, then deploy.
+Save the new version as `docs/CV Rusty Taylor YYMMDD.pages` and export it to a PDF of the same name, copy the PDF to `public/cv.pdf`, edit `public/index.html` and `public/sitemap.xml` to match, then deploy.
+
+Only the current version in `docs/` is tracked. Change the `!docs/CV Rusty Taylor YYMMDD.*` line in `.gitignore` to the new date so older versions stay local.
 
 ## Deploy
 
 ```bash
-cd ~/Developer/tehillim/cv && npx wrangler deploy
+cd ~/Developer/research/cv && npx wrangler deploy
 ```
 
 Custom domain is attached in the Cloudflare dashboard under Workers & Pages, rdtaylorjr, Settings, Domains & Routes.

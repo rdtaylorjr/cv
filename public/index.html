@@ -26,7 +26,7 @@
   "email": "rdtaylorjr@gatech.edu",
   "sameAs": ["https://orcid.org/0009-0007-0702-2375", "https://github.com/rdtaylorjr"],
   "affiliation": {"@type": "Organization", "name": "Georgia Institute of Technology"},
-  "knowsAbout": ["Hebrew Psalms", "Biblical Hebrew", "Dead Sea Scrolls", "Computational linguistics"]
+  "knowsAbout": ["Textual criticism of the Hebrew Bible", "Septuagint", "Peshitta", "Dead Sea Scrolls", "Hebrew Psalms", "Computational linguistics"]
 }
 </script>
 <style>
@@ -102,7 +102,8 @@ body.away .top .name{opacity:1}
 @media (max-width:900px){
   .s{padding:calc(var(--nav-h) + 1rem) 0 3rem}
   .s.hero{padding:var(--nav-h) 0}
-  .hero h1{width:auto}
+  .hero h1{width:auto;position:static}
+  .hero h1.in{transform:none}
   .hero .heb{right:0}
   .s .num{right:.5rem;top:auto;bottom:1rem;transform:none}
   .s .num span{font-size:clamp(6rem,24vw,9rem)}
@@ -174,7 +175,7 @@ body.away .top .name{opacity:1}
   <div class="num" aria-hidden="true"><span>01</span></div>
   <div class="wrap">
     <h2 class="in">Research Interests</h2>
-    <p class="statement in"><span class="r">Computational textual criticism of the Hebrew Bible,</span> exploring scribal practice, translation technique, and linguistic variation across ancient witnesses. Current work on the Psalms.</p>
+    <p class="statement in"><span class="r">Computational textual criticism of the Hebrew Bible,</span> eclectic digital critical editions, scribal practice, translation technique, and linguistic variation across ancient witnesses. Current work on the Psalms.</p>
   </div>
 </section>
 
@@ -196,8 +197,8 @@ body.away .top .name{opacity:1}
   <div class="wrap">
     <h2 class="in">Languages</h2>
     <ul class="big in">
-      <li><span class="k">Research</span><span><span class="r">Hebrew</span> Epigraphic, Biblical, Qumranic, Mishnaic&nbsp; <span class="r">Greek</span> Hellenistic&nbsp; <span class="r">Aramaic</span> Imperial, Palestinian, Syriac&nbsp; <span class="r">Canaanite</span> Phoenician, Ammonite, Moabite, Edomite&nbsp; <span class="r">Coptic</span> Sahidic&nbsp; <span class="r">Hittite</span></span></li>
-      <li><span class="k">Modern</span><span><span class="r">English</span> native&nbsp; <span class="r">Hebrew</span> reading&nbsp; <span class="r">French</span> reading&nbsp; <span class="r">German</span> basic reading</span></li>
+      <li><span class="k">Research</span><span><span class="r">Hebrew</span> Epigraphic, Biblical, Qumranic, Mishnaic&nbsp; <span class="r">Greek</span> Hellenistic&nbsp; <span class="r">Aramaic</span> Imperial, Jewish Literary, Syriac&nbsp; <span class="r">Latin</span>&nbsp; <span class="r">Coptic</span> Sahidic&nbsp; <span class="r">Hittite</span></span></li>
+      <li><span class="k">Modern</span><span><span class="r">English</span> native&nbsp; <span class="r">German</span> reading&nbsp; <span class="r">French</span> reading&nbsp; <span class="r">Hebrew</span> reading</span></li>
     </ul>
   </div>
 </section>
@@ -207,9 +208,10 @@ body.away .top .name{opacity:1}
   <div class="wrap">
     <h2 class="in">Research Experience</h2>
     <ul class="rows in">
-      <li><span class="h"><span class="r">Tehillim: Computational Analysis of the Psalms</span>&nbsp; <a href="https://tehillim.dev">tehillim.dev</a>&nbsp; <a href="https://github.com/rdtaylorjr/tehillim">github.com/rdtaylorjr/tehillim</a></span><span class="when">2026–present</span><p class="d">Evaluation of formal and distributional representations of Hebrew verse in ETCBC BHSA using Text-Fabric, with replaceable parallelism and genre baselines. Replication and extension of analyses in Trublet (1991) and van Peursen (2020). Adaptation of DSS2ETCBC to align 11Q5 to BHSA.</p></li>
-      <li><span class="h"><span class="r">Transcriber, Critical Edition of the Hebrew Psalter (CEHP)</span>&nbsp; Duke Divinity School</span><span class="when">2026–present</span><p class="d">Transcribing MK31 (docID 350007) for the eclectic critical edition of Psalms 1–50, directed by Brent A. Strawn and Drew Longacre.</p></li>
-      <li><span class="h"><span class="r">Graduate Research Assistant to Martin G. Abegg Jr. and Peter W. Flint</span>&nbsp; Trinity Western University</span><span class="when">2011–2013</span><p class="d">Transcription and morphological tagging of Mishnah manuscripts. Syntactic tagging of Dead Sea Scrolls texts. Transcription and indexing of Naḥal Ḥever Greek papyri for <cite>The Dead Sea Scrolls Concordance</cite>, vol. 2 (Brill, 2016). Research and drafting for edited volumes with P. Flint.</p></li>
+      <li><span class="h"><span class="r">Tehillim: Computational Analysis of the Psalms</span>&nbsp; <a href="https://tehillim.dev">tehillim.dev</a>&nbsp; <a href="https://github.com/rdtaylorjr/tehillim">github.com/rdtaylorjr/tehillim</a></span><span class="when">2026–present</span><p class="d">Collation of Judean Desert manuscripts and versions against MT. Statistical analysis of variants where multiple readings of consonants are possible. Hebrew poetry text-embedding benchmarks, similarity, and clustering.</p></li>
+      <li><span class="h"><span class="r">Transcriber, Critical Edition of the Hebrew Psalter (CEHP)</span>&nbsp; Duke Divinity School</span><span class="when">2026–present</span><p class="d">Transcribing MK31 (docID 350007) for the HBCE eclectic critical edition of Psalms 1–50, directed by Brent A. Strawn and Drew Longacre.</p></li>
+      <li><span class="h"><span class="r">Graduate Research Assistant to Martin G. Abegg Jr. and Peter W. Flint</span>&nbsp; Trinity Western University</span><span class="when">2011–2013</span><p class="d">Transcription and morphological tagging of Mishnah manuscripts. Syntactic tagging of Dead Sea Scrolls texts. Indexing of Naḥal Ḥever Greek papyri for <cite>The Dead Sea Scrolls Concordance</cite>, vol. 2 (Brill, 2016). Research and drafting for edited volumes with P. Flint.</p></li>
+      <li><span class="h"><span class="r">3rd International Septuaginta Summer School</span>&nbsp; Göttingen Academy of Sciences and Humanities</span><span class="when">2012</span><p class="d">“Current Issues in Septuagint Scholarship: New Insights and Debates. Readings in Proverbs.”</p></li>
     </ul>
   </div>
 </section>
@@ -221,16 +223,30 @@ body.away .top .name{opacity:1}
     <div class="bib in">
       <h3>Conference Papers</h3>
       <ul class="bib">
-        <li>Taylor, Russell, Benjamin Herbert, and Michael Sana. <span class="r">“Pun Intended: Multi-agent Translation of Wordplay with Contrastive Learning and Phonetic-Semantic Embeddings.”</span> Pages 274–287 in <cite>Experimental IR Meets Multilinguality, Multimodality, and Interaction</cite>. Edited by Matthias Hagen et al. LNCS 17087. Springer, 2027. <a href="https://doi.org/10.1007/978-3-032-39150-6_20">doi:10.1007/978-3-032-39150-6_20</a>.</li>
-        <li>Taylor, Russell, Adam Brikman, and Prateek Awate. <span class="r">“Searching for Sound-Meaning Collisions: Graph-Based Affordance Retrieval and Multi-Evaluator Ranking for Pun Translation at CLEF 2026 JOKER Task 2.”</span> Pages 4295–4306 in <cite>Working Notes of the Conference and Labs of the Evaluation Forum</cite>. CEUR Workshop Proceedings, <a href="https://ceur-ws.org/Vol-4283/">CEUR-WS Vol-4283</a>, 4295–4306.&nbsp; First place, JOKER Task 2.</li>
-        <li>Taylor, Russell, Benjamin Herbert, and Michael Sana. <span class="r">“Pun Intended: Multi-Agent Translation of Wordplay with Contrastive Learning and Phonetic-Semantic Embeddings for CLEF JOKER 2025 Task 2.”</span> Pages 2870–2888 in <cite>Working Notes of the Conference and Labs of the Evaluation Forum</cite>. CEUR Workshop Proceedings 4038, 2025. <a href="https://ceur-ws.org/Vol-4038/paper_229.pdf">CEUR-WS Vol-4038</a>, 2870–2888.&nbsp; Best of CLEF 2025 Labs.&nbsp; First place, JOKER Task 2.</li>
+        <li>Taylor, Russell, Benjamin Herbert, and Michael Sana. <span class="r">“Pun Intended: Multi-agent Translation of Wordplay with Contrastive Learning and Phonetic-Semantic Embeddings.”</span> Pages 274–287 in <cite>Experimental IR Meets Multilinguality, Multimodality, and Interaction</cite>. Edited by Matthias Hagen et al. LNCS 17087. Springer, 2026. <a href="https://doi.org/10.1007/978-3-032-39150-6_20">doi:10.1007/978-3-032-39150-6_20</a>.</li>
+        <li>Taylor, Russell, Adam Brikman, and Prateek Awate. <span class="r">“Searching for Sound-Meaning Collisions: Graph-Based Affordance Retrieval and Multi-Evaluator Ranking for Pun Translation at CLEF 2026 JOKER Task 2.”</span> Pages 4295–4306 in <cite>Working Notes of the Conference and Labs of the Evaluation Forum</cite>. <a href="https://ceur-ws.org/Vol-4283/">CEUR Workshop Proceedings 4283</a>, 2026.&nbsp; First place, JOKER Task 2.</li>
+        <li>Taylor, Russell, Benjamin Herbert, and Michael Sana. <span class="r">“Pun Intended: Multi-Agent Translation of Wordplay with Contrastive Learning and Phonetic-Semantic Embeddings for CLEF JOKER 2025 Task 2.”</span> Pages 2870–2888 in <cite>Working Notes of the Conference and Labs of the Evaluation Forum</cite>. <a href="https://ceur-ws.org/Vol-4038/paper_229.pdf">CEUR Workshop Proceedings 4038</a>, 2025.&nbsp; Best of CLEF 2025 Labs.&nbsp; First place, JOKER Task 2.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="presentations">
+  <div class="num" aria-hidden="true"><span>06</span></div>
+  <div class="wrap">
+    <h2 class="in">Publications <small>continued</small></h2>
+    <div class="bib in">
+      <h3>Conference Presentations</h3>
+      <ul class="bib">
+        <li><span class="r">“Translation Technique and Lexical Choice in Greek Exodus.”</span> Society of Biblical Literature Annual Meeting, IOSCS session, Chicago, November 2012.</li>
+        <li><span class="r">“Syntactic Functions of the Particle <span lang="he" dir="rtl">כי</span> in Qumran Hebrew.”</span> Pacific Northwest Regional Meeting of the AAR/SBL and ASOR, March 2012.&nbsp; First Prize, Graduate Student Paper Competition.</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section class="s" id="chapters">
-  <div class="num" aria-hidden="true"><span>06</span></div>
+  <div class="num" aria-hidden="true"><span>07</span></div>
   <div class="wrap">
     <h2 class="in">Publications <small>continued</small></h2>
     <div class="bib in">
@@ -242,20 +258,6 @@ body.away .top .name{opacity:1}
       <ul class="bib">
         <li>Taylor, Russell. Review of <cite>Proverbs (The Story of God Bible Commentary)</cite>, by Ryan P. O'Dowd. <cite>Books at a Glance</cite>, 2018.</li>
         <li>Taylor, Russell. Review of <cite>Rediscovering the Dead Sea Scrolls: An Assessment of Old and New Approaches and Methods</cite>, edited by Maxine L. Grossman. Pages 455–458 in <cite>Perspectives on Hebrew Scriptures X: Comprising the Contents of Journal of Hebrew Scriptures, vol. 13</cite>. Edited by Christophe Nihan and Ehud Ben Zvi. Gorgias, 2017. <a href="https://doi.org/10.31826/9781463237646-034">doi:10.31826/9781463237646-034</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="s" id="reviews">
-  <div class="num" aria-hidden="true"><span>07</span></div>
-  <div class="wrap">
-    <h2 class="in">Publications <small>continued</small></h2>
-    <div class="bib in">
-      <h3>Conference Presentations</h3>
-      <ul class="bib">
-        <li><span class="r">“Translation Technique and Lexical Choice in Greek Exodus.”</span> Society of Biblical Literature Annual Meeting, IOSCS session, Chicago, November 2012.</li>
-        <li><span class="r">“Syntactic Functions of the Particle <span lang="he" dir="rtl">כי</span> in Qumran Hebrew.”</span> Pacific Northwest Regional Meeting of the AAR/SBL and ASOR, March 2012.&nbsp; First Prize, Graduate Student Paper Competition.</li>
       </ul>
     </div>
   </div>
@@ -289,10 +291,10 @@ body.away .top .name{opacity:1}
   <div class="wrap">
     <h2 class="in">Skills</h2>
     <ul class="big in">
-      <li><span class="k">Digital Philology</span><span>BHSA, Andersen-Forbes, Holmstedt-Abegg, Westminster morphology, Text-Fabric, Emdros/MQL</span></li>
-      <li><span class="k">Data Analysis</span><span>NumPy, SciPy, statsmodels, pandas, matplotlib, Jupyter</span></li>
-      <li><span class="k">Machine Learning</span><span>PyTorch, Hugging Face Transformers, sentence-transformers, scikit-learn, gensim</span></li>
-      <li><span class="k">Engineering</span><span>Python, Scala, Java, SQL, Spark, AWS, Docker, Linux</span></li>
+      <li><span class="k">Digital Philology</span><span>Text-Fabric, TEI P5 / IGNTP transcription, CollateX, eScriptorium/Kraken HTR</span></li>
+      <li><span class="k">Generative AI</span><span>LangGraph, DSPy, MCP, OpenRouter, vLLM, TRL, Unsloth, Qdrant, lm-evaluation-harness</span></li>
+      <li><span class="k">Machine Learning</span><span>PyTorch, Hugging Face (Transformers, PEFT/LoRA), sentence-transformers, scikit-learn</span></li>
+      <li><span class="k">Data Analysis</span><span>NumPy, pandas, Polars, DuckDB, SciPy, statsmodels, matplotlib, Jupyter, Python</span></li>
     </ul>
   </div>
 </section>
@@ -307,7 +309,7 @@ body.away .top .name{opacity:1}
       <li><span class="k"></span><span>Association for Computational Linguistics</span></li>
     </ul>
   </div>
-  <p class="end">Last updated October 6, 2026</p>
+  <p class="end">Last updated October 20, 2026</p>
 </section>
 
 </main>
